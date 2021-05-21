@@ -1,0 +1,25 @@
+<mat-accordion>
+  <mat-expansion-panel hideToggle (opened)="panelOpenState = true"
+  (closed)="panelOpenState = false"
+  *ngFor='let user of users'
+  >
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        USER1 {{user.name}}
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    id: {{user.id}}
+    <br>
+    age: {{user.age}}
+  </mat-expansion-panel>
+</mat-accordion>
+
+<div>
+ 
+    <mat-label>Input</mat-label>
+    <input matInput #email>
+    <mat-label>Input</mat-label>
+    <input matInput #password>
+    <button mat-stroked-button (click)="login(email, password)">Basic</button>
+
+</div>
